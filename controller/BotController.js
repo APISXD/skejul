@@ -22,10 +22,8 @@ module.exports = class BotController extends Controller {
   }
 
   async sched(request) {
-    // Menampilkan gambar alamat kantor dari URL
-    return Response.image.fromURL(
-      "https://i.ibb.co/LdGpHXZ/Gambar-Whats-App-2024-04-23-pukul-19-33-04-3213685b.jpg",
-      "Jadwal"
+    return this.reply(
+      "Jadwal : https://ibb.co/cvkPXn9"
     );
   }
 };
