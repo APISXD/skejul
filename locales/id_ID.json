@@ -1,0 +1,6 @@
+{
+    "intro": "Nyari ape?",
+    "template.menu": "Ketik angka *{{number}}* untuk : *{{menu}}*",
+    "menu.daftarProduk": "Personal Blog 🌍",
+    "menu.sched": "Jadwal 📅"
+}
