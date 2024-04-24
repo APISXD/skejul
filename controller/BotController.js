@@ -5,7 +5,7 @@ module.exports = class BotController extends Controller {
   async introduction(request) {
     if (request.text.toLowerCase().includes("afp")) {
       return Response.menu.fromArrayOfString(
-        [f("menu.daftarProduk"), f("menu.sched")],
+        [f("menu.daftarProduk"), f("menu.sched"), f("menu.kereta")],
         f("intro", [request.name]),
         f("template.menu")
       );
@@ -16,14 +16,28 @@ module.exports = class BotController extends Controller {
   }
 
   async product(request) {
-    return this.reply(
-      "Ini : https://faizz.vercel.app"
-    );
+    return this.reply("Ini : https://faizz.vercel.app");
+  }
+  
+  async kereta(request) {
+    // Jadwal kereta KP Bandan ke PS Senen pada tanggal 25/04/24
+    const jadwal = `
+    07:00 - 08:00
+    Dari Stasiun:
+    BEKASI: 06:30, 06:40, 07:06
+    KRANJI: 06:33, 06:43, 07:07
+    CAKUNG: 06:38, 06:48, 07:14
+  `;
+
+    // Mengembalikan jadwal sebagai balasan
+    return this.reply(jadwal);
   }
 
   async sched(request) {
-    return this.reply(
-      "Jadwal : https://ibb.co/cvkPXn9"
+    // Menampilkan gambar alamat kantor dari URL
+    return Response.image.fromURL(
+      "https://i.ibb.co/LdGpHXZ/Gambar-Whats-App-2024-04-23-pukul-19-33-04-3213685b.jpg",
+      "Jadwal"
     );
   }
 };
