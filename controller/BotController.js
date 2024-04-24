@@ -5,7 +5,7 @@ module.exports = class BotController extends Controller {
   async introduction(request) {
     if (request.text.toLowerCase().includes("afp")) {
       return Response.menu.fromArrayOfString(
-        [f("menu.daftarProduk"), f("menu.sched"), f("menu.kereta")],
+        [f("menu.daftarProduk"), f("menu.sched")],
         f("intro", [request.name]),
         f("template.menu")
       );
@@ -16,10 +16,6 @@ module.exports = class BotController extends Controller {
   }
 
   async product(request) {
-    return this.reply("Ini : https://faizz.vercel.app");
-  }
-  
-  async kereta(request) {
     // Jadwal kereta KP Bandan ke PS Senen pada tanggal 25/04/24
     const jadwal = `
     07:00 - 08:00
