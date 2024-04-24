@@ -16,17 +16,19 @@ module.exports = class BotController extends Controller {
   }
 
   async product(request) {
-    // Jadwal kereta KP Bandan ke PS Senen pada tanggal 25/04/24
-    const jadwal = `
-    07:00 - 08:00
-    Dari Stasiun:
-    BEKASI: 06:30, 06:40, 07:06
-    KRANJI: 06:33, 06:43, 07:07
-    CAKUNG: 06:38, 06:48, 07:14
-  `;
+    // Menampilkan jadwal kereta sebagai respons teks
+    const jadwalKereta = `
+      07:00 - 08:00
+      Dari Stasiun:
+      BEKASI: 06:30, 06:40, 07:06
+      KRANJI: 06:33, 06:43, 07:07
+      CAKUNG: 06:38, 06:48, 07:14
+    `;
 
-    // Mengembalikan jadwal sebagai balasan
-    return this.reply(jadwal);
+    return Response.text.fromText(
+      "Berikut adalah jadwal kereta KP Bandan ke PS Senen pada tanggal 25/04/24:\n\n" +
+        jadwalKereta
+    );
   }
 
   async sched(request) {
