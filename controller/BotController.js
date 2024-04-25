@@ -20,10 +20,16 @@ module.exports = class BotController extends Controller {
     const jadwalKereta = `
 *Jadwal kereta KP Bandan ke PS Senen pada tanggal 25/04/24*
 JAM *07:00 - 08:00*
+Berangkat
 Dari Stasiun:
 *BEKASI:* _06:30, 06:40, 07:06_
 *KRANJI:* _06:33, 06:43, 07:07_
 *CAKUNG:* _06:38, 06:48, 07:14_
+  
+Pulang
+Arah:
+*CIKARANG:* _18:02, 18:07, 18:12, 18:22, 18:36, 18:47, 19:00_
+*BEKASI:*_18:00, 18:17, 18:27, 18:54, 19:08_
     `;
 
     // Mengembalikan jadwal sebagai balasan
