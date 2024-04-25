@@ -18,7 +18,6 @@ module.exports = class BotController extends Controller {
   async product(request) {
     // Jadwal kereta KP Bandan ke PS Senen pada tanggal 25/04/24
     const jadwalKereta = `
-Jadwal kereta KP Bandan ke PS Senen pada tanggal 25/04/24
 JAM 07:00 - 08:00
 Dari Stasiun:
 BEKASI: 06:30, 06:40, 07:06
