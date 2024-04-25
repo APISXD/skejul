@@ -18,13 +18,12 @@ module.exports = class BotController extends Controller {
   async product(request) {
     // Jadwal kereta KP Bandan ke PS Senen pada tanggal 25/04/24
     const jadwalKereta = `
-      07:00 - 08:00
-      Dari Stasiun:
-      BEKASI: 06:30, 06:40, 07:06
-      KRANJI: 06:33, 06:43, 07:07
-      CAKUNG: 06:38, 06:48, 07:14
-    `;
-
+*Jadwal kereta KP Bandan ke PS Senen pada tanggal 25/04/24*
+JAM *07:00 - 08:00*
+Dari Stasiun:
+*BEKASI:* _06:30, 06:40, 07:06_
+*KRANJI:* _06:33, 06:43, 07:07_
+*CAKUNG:* _06:38, 06:48, 07:14_
     // Mengembalikan jadwal sebagai balasan
     return this.reply(jadwalKereta);
 }
