@@ -3,7 +3,7 @@ const f = require("../utils/Formatter");
 
 module.exports = class BotController extends Controller {
   async introduction(request) {
-    if (request.text.toLowerCase().includes("afp" "kreta")) {
+    if (request.text.toLowerCase().includes("afp")) {
       return Response.menu.fromArrayOfString(
         [f("menu.daftarProduk"), f("menu.sched")],
         f("intro", [request.name]),
